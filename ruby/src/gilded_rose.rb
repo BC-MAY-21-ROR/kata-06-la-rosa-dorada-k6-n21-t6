@@ -30,6 +30,7 @@ class GildedRose
       quality = quality + 1 if sell_in < 11 && (quality < 50) && (!verificate_aged_brie(name))  if verificate_backstage(name)
       quality = quality + 1 if sell_in < 6 && (quality < 50) && (!verificate_aged_brie(name))  if verificate_backstage(name)
     end
+    item.quality
   end
 
   def update_quality_second(item)
