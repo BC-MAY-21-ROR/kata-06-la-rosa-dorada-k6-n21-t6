@@ -30,7 +30,6 @@ class GildedRose
       quality = quality + 1 if sell_in < 11 && (quality < 50) && (!verificate_aged_brie(name))  if verificate_backstage(name)
       quality = quality + 1 if sell_in < 6 && (quality < 50) && (!verificate_aged_brie(name))  if verificate_backstage(name)
     end
-    item.quality
   end
 
   def update_quality_second(item)
@@ -57,5 +56,6 @@ class GildedRose
       update_quality_first(item)
       update_quality_second(item)
     end
+    @concat = "#{@days.to_i}, #{@items.length.to_i}"
   end
 end
